@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./rahul.component.css']
 })
 export class RahulComponent {
+  title = 'my-app';
+  myName = 'Rahul';
+  getValue()
+  {
+    return "Get Function Data"
+  }
 
 }

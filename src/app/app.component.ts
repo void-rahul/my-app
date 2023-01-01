@@ -6,10 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'my-app';
-  myName = 'Rahul';
-  getValue()
-  {
-    return "Get Function Data"
-  }
+ 
 }
