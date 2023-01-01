@@ -18,7 +18,7 @@ export class ExpenseComponent {
   addSidePanel(){
     this.isSidePanelOpen= true;
    }
-   cloeSidePanel(){
+   closeSidePanel(){
     this.isSidePanelOpen= false;
    }
 

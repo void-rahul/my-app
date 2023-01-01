@@ -8,6 +8,7 @@ import { LoginComponent } from './components/login/login.component';
 import { RegitrationComponent } from './components/regitration/regitration.component';
 import { ExpenseComponent } from './components/expense/expense.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { Test1Component } from './components/test1/test1.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     RahulComponent,
     LoginComponent,
     RegitrationComponent,
-    ExpenseComponent
+    ExpenseComponent,
+    Test1Component
   ],
   imports: [
     BrowserModule,
