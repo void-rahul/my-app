@@ -7,6 +7,7 @@ import { RahulComponent } from './components/rahul/rahul.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegitrationComponent } from './components/regitration/regitration.component';
 import { ExpenseComponent } from './components/expense/expense.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ExpenseComponent } from './components/expense/expense.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
