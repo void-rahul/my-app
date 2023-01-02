@@ -1,1 +1,63 @@
-<p>last works!</p>
+<div class="row my-4">
+    <div class="col-8" [ngClass]="isSidePanelOpen ? 'col-8':'col-12' ">
+        <div class="card">
+            <div class="card-header text-white" style="background-color: #2C74B3;">
+                <div class="row">
+                    <div class="col-6">
+                        Expense List
+                    </div>
+                    <div class="col-6 text-end">
+                        <button class="btn btn-sm btn-success border" (click)="addSidePanel()">Add Expense</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <table class="table table-bordered table-striped">
+                    <thead class="border-dark">
+                        <tr class="text-center">
+                            <th>Sr No</th>
+                            <th>Head</th>
+                            <th>ExpenseAmount</th>
+                            <th>FirmName</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-center">
+                        <tr *ngFor="let expense of expenses;let sr =index">
+                            <td>{{sr+1}}</td>
+                            <td>{{expense.Head}}</td>
+                            <td>{{expense.ExpenseAmount}}</td>
+                            <td>{{expense.FirmName}}</td>
+                           
+                            <td class="text-center">
+                                <button class="btn btn-sm btn-secondary border-dark mx-2"
+                                    (click)="onEdit(expense)">Edit</button>
+                                <button class="btn btn-sm btn-danger border-dark"
+                                    (click)="onDelete(expense.Id)">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="col-4 border-dark" *ngIf="isSidePanelOpen">
+        <div class="card">
+            <div class="card-header text-white" style="background-color: #2C74B3;">
+                <div class="row">
+                    <div class="col-6">
+                        Expense Form
+                    </div>
+                    <div class="col-6 text-end">
+                        <button class="btn btn-sm btn-danger border" (click)="closeSidePanel()">Close</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <form>
+                   
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

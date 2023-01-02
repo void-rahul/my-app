@@ -9,9 +9,6 @@ import { ExpenseService } from 'src/app/service/expense.service';
 })
 export class ExpenseComponent implements OnInit{
   ngOnInit(): void {
-    
-    
-    
   }
 
   isSidePanelOpen: boolean = false;
