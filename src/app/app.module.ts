@@ -8,7 +8,8 @@ import { ExpenseComponent } from './components/expense/expense.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule }from '@angular/common/http';
 import { FinelComponent } from './components/finel/finel.component';
-import { Expense2Component } from './components/expense2/expense2.component'
+import { Expense2Component } from './components/expense2/expense2.component';
+import { LastComponent } from './components/last/last.component'
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { Expense2Component } from './components/expense2/expense2.component'
     ExpenseComponent,
     FinelComponent,
     Expense2Component,
+    LastComponent,
   ],
   imports: [
     BrowserModule,
