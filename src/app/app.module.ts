@@ -4,27 +4,25 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RahulComponent } from './components/rahul/rahul.component';
-import { LoginComponent } from './components/login/login.component';
-import { RegitrationComponent } from './components/regitration/regitration.component';
 import { ExpenseComponent } from './components/expense/expense.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { Test1Component } from './components/test1/test1.component';
-import { Test2Component } from './components/test2/test2.component';
+import { HttpClientModule }from '@angular/common/http';
+import { FinelComponent } from './components/finel/finel.component';
+import { Expense2Component } from './components/expense2/expense2.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     RahulComponent,
-    LoginComponent,
-    RegitrationComponent,
     ExpenseComponent,
-    Test1Component,
-    Test2Component
+    FinelComponent,
+    Expense2Component,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

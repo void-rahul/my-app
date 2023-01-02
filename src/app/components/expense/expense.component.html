@@ -23,21 +23,22 @@
                         </tr>
                     </thead>
                     <tbody class="text-center">
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                        <tr *ngFor="let item of expenseArray;let sr =index">
+                            <td>{{sr+1}}</td>
+                            <td>{{item.Head}}</td>
+                            <td>{{item.ExpenseAmount}}</td>
+                            <td>{{item.FirmName}}</td>
                             <td class="text-center">
-                                <button class="btn btn-sm btn-secondary border-dark mx-2">Edit</button>
-                                <button class="btn btn-sm btn-danger border-dark">Delete</button>
+                                <button class="btn btn-sm btn-secondary border-dark mx-2"
+                                    (click)="onEdit(item)">Edit</button>
+                                <button class="btn btn-sm btn-danger border-dark"
+                                    (click)="onDelete(item.Id)">Delete</button>
                             </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </div>
-
     </div>
     <div class="col-4 border-dark" *ngIf="isSidePanelOpen">
         <div class="card">
@@ -53,12 +54,26 @@
             </div>
             <div class="card-body">
                 <form>
-                    <label for="">Name</label>
-                    <input type="text">
-
+                    <label for="">Expense Amount</label>
+                    <input type="text" name="ExpenseAmount" required class="form-control">
+                    <div class="text-danger">
+                        <span>Expense Amount is required</span>
+                    </div>
+                    <label for="">Firm Name</label>
+                    <input type="text" name="FirmName" required class="form-control">
+                    <div class="text-danger">
+                        <span>Owner Name required</span>
+                    </div>
+                    <button class="btn btn-sm btn-success my-3 mx-2 border-dark" 
+                    (click)="SaveExpense()">Save</button>
+                    <button class="btn btn-sm btn-success my-3 mx-2 border-dark"
+                        (click)="updateExpense()">Update</button>
+                    <button class="btn btn-sm btn-danger border-dark" 
+                        (click)="cancelExpense()">Cancle</button>
+                    <button class="btn btn-sm btn-danger border mx-2"
+                        (click)="closeSidePanel()">Close</button>
                 </form>
             </div>
         </div>
-
     </div>
 </div>

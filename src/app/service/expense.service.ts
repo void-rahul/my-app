@@ -1,9 +1,12 @@
 import { Injectable } from '@angular/core';
-
+import { HttpClient} from '@angular/common/http' 
 @Injectable({
   providedIn: 'root'
 })
 export class ExpenseService {
 
-  constructor() { }
+ constructor(private http:HttpClient) { }
+ expense(){
+  return this.http.get('https://transtraapi.sparatec.com/api/Firm/GetAllFirm');
+ }
 }
