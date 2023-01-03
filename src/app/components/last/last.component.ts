@@ -8,17 +8,22 @@ import { LastService } from './last.service'
   styleUrls: ['./last.component.css']
 })
 export class LastComponent {
-  expenses:any;
-  constructor(private expenseData:ExpenseService){
-    expenseData.expense().subscribe((data)=>{
-      console.warn("data",data)
-      this.expenses=data
+  expenses: any;
+  constructor(private expenseData: ExpenseService) {
+    expenseData.expense().subscribe((data) => {
+      console.warn("data", data)
+      this.expenses = data
+    })
+  }
+
+  getexpenseFormData(data: any) {
+
+    this.expenseData.expense().subscribe((data)=>{
     })
   }
 
 
-
-  expenseArray: any[]= [];
+  expenseArray: any[] = [];
   expenseObj: any = {
     // "Id": "",
     // "ExpenseHead": "",
@@ -41,25 +46,25 @@ export class LastComponent {
     // "CreatedDate": "",
     // "CreatedBy": ''
 
-    
+
   };
 
   onEdit(Id: any) {
-    
+
   };
   onDelete(id: any) {
-  };  
+  };
 
 
 
   isSidePanelOpen: boolean = false;
 
-  addSidePanel(){
-    this.isSidePanelOpen= true;
+  addSidePanel() {
+    this.isSidePanelOpen = true;
   };
 
-  closeSidePanel(){
-    this.isSidePanelOpen= false;
+  closeSidePanel() {
+    this.isSidePanelOpen = false;
   };
 
 }

@@ -7,6 +7,6 @@ export class FinelService {
 
   constructor(private http:HttpClient) { }
   expence(){
-    return this.http.get('https://transtraapi.sparatec.com/api/Firm/GetAllFirm')
+    return this.http.get('')
   }
 }

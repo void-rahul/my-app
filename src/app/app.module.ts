@@ -10,6 +10,7 @@ import { HttpClientModule }from '@angular/common/http';
 import { FinelComponent } from './components/finel/finel.component';
 import { Expense2Component } from './components/expense2/expense2.component';
 import { LastComponent } from './components/last/last.component'
+import { FormsModule } from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { LastComponent } from './components/last/last.component'
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

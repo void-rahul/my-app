@@ -17,18 +17,19 @@
                         <tr class="text-center">
                             <th>Sr No</th>
                             <th>Head</th>
+                            <th>ExpenseHead</th>
                             <th>ExpenseAmount</th>
-                            <th>FirmName</th>
-                            <th>Action</th>
+                            <th>FirmName</th>                                                
+                            <th>Action</th>                                           
                         </tr>
                     </thead>
                     <tbody class="text-center">
                         <tr *ngFor="let expense of expenses;let sr =index">
                             <td>{{sr+1}}</td>
                             <td>{{expense.Head}}</td>
+                            <td>{{expense.ExpenseHead}}</td>
                             <td>{{expense.ExpenseAmount}}</td>
-                            <td>{{expense.FirmName}}</td>
-                           
+                            <td>{{expense.FirmName}}</td>                                                  
                             <td class="text-center">
                                 <button class="btn btn-sm btn-secondary border-dark mx-2"
                                     (click)="onEdit(expense)">Edit</button>
@@ -54,7 +55,15 @@
                 </div>
             </div>
             <div class="card-body">
-                <form>
+                <form #expenseForm="ngForm" (ngSubmit)="getexpenseFormData(expenseForm.value)">
+                    <label for="">Head</label>
+                    <input type="text" name="Head" class="form-control" ngModel>
+                    <label for="">ExpenseHead</label>
+                    <input type="text" name="ExpenseHead" class="form-control" ngModel>
+                    <label for="">ExpenseAmount</label>
+                    <input type="text" name="ExpenseAmount" class="form-control" ngModel>
+                    <button class="btn btn-sm btn-success my-3 mx-2 border-dark">Save</button>
+                   
                    
                 </form>
             </div>
